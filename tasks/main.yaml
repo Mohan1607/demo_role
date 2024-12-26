@@ -1,0 +1,8 @@
+- name: install webserver
+  ansible.builtin.apt:
+    name: apache2
+    state: present
+- name: copy content
+  ansible.builtin.copy:
+    src: files/index.html
+    dest: /var/www/html
